@@ -1,0 +1,23 @@
+import React, { useState, useEffect } from "react";
+import ApodCard from "./ApodCard";
+import axios from "axios";
+
+export default function ApodDisplay() {
+  const [apod, setApod] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=dcVhv6ZofSZEfpKL6qYmtTiosFipmVaBACSkyZMv"
+      )
+      .then(res => {
+        console.log("Fetched!", res);
+        setPod(res.data);
+      })
+      .catch(err => {
+        console.log("Error: The data was not returned!", err);
+      });
+  }, []);
+}
+
+// need a return statement for a div or whatever you're going to hold this stuff in
