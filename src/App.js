@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import ApodCard from "./ApodCard";
 
 function App() {
   const [pod, setApod] = useState([]);
@@ -20,6 +21,14 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <ApodCard
+        key={pod.id}
+        title={pod.title}
+        explanation={pod.explanation}
+        image={pod.url}
+        date={pod.date}
+      />
+
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
