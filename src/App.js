@@ -38,22 +38,3 @@ function App() {
 }
 
 export default App;
-
-// import React from "react";
-// import ApodDisplay from "./components/ApodDisplay";
-// import "./App.css";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <p>
-//         Read through the instructions in the README.md file to build your NASA
-//         app! Have fun 🚀!
-//       </p>
-//       <h1>Astronomy Picture of the Day courtesy of NASA!</h1>
-//       <ApodDisplay />
-//     </div>
-//   );
-// }
-
-// export default App;
