@@ -23,16 +23,11 @@ function App() {
     <div className="App">
       <ApodCard
         key={pod.id}
+        date={pod.date}
         title={pod.title}
         explanation={pod.explanation}
         image={pod.url}
-        date={pod.date}
       />
-
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
     </div>
   );
 }
