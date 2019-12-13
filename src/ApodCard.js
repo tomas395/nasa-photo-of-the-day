@@ -1,24 +1,22 @@
 import React from "react";
-import { Card, CardImg, CardTitle } from "reactstrap";
-import { podText, podImg, podTitle } from "./styled-components";
+import { PodText, PodImg, PodTitle } from "./styled-components";
 
 const ApodCard = pod => {
   return (
-    <podText>
+    <PodText>
       <div className="aPodCard">
         <div className="aPodCard2">
           <header>
-            <podTitle>Picture of the day courtesy of NASA!</podTitle>
+            <PodTitle>Picture of the day courtesy of NASA!</PodTitle>
           </header>
           <h2>"{pod.title}"</h2>
           <h2>{pod.date}</h2>
-          <podImg>
-            <img src={pod.image} alt={pod.title} />
-          </podImg>
+          <PodImg src={pod.image} alt={pod.title} />
+
           <p className="App">Explanation: {pod.explanation}</p>
         </div>
       </div>
-    </podText>
+    </PodText>
   );
 };
 
